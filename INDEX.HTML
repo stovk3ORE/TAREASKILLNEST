@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Control de Laboratorios TI</title>
+
+  <!-- Tipografía Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- SECCIÓN 1: HEADER / MENÚ DE CONTROL -->
+  <header class="header">
+    <div class="header-title">
+      <h1>SISTEMA DE CONTROL DE LABORATORIOS TI</h1>
+    </div>
+    <nav class="nav">
+      <a href="#mapa">Mapa de Puestos</a>
+      <a href="#detalle">Detalle de Puesto</a>
+    </nav>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- SECCIÓN 2: DASHBOARD / MAPA DE PUESTOS (Figma View 02) -->
+    <section id="mapa" class="section-dashboard">
+      <div class="section-header">
+        <h2>Mapa de Puestos - Taller TI</h2>
+        <div class="legend">
+          <span class="legend-item"><span class="dot green"></span> Verde: OK</span>
+          <span class="legend-item"><span class="dot red"></span> Rojo: Fallando</span>
+        </div>
+      </div>
+
+      <!-- Grilla con Flexbox de los Nodos PC -->
+      <div class="pc-grid">
+        <article class="pc-card">
+          <span class="pc-id">PC-01</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-02</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-03</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-04</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-05</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-06</span>
+          <span class="status-dot green"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-07</span>
+          <span class="status-dot red"></span>
+        </article>
+        <article class="pc-card">
+          <span class="pc-id">PC-08</span>
+          <span class="status-dot green"></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: DETALLE DE INCIDENCIA EN PUESTO (Figma View 03) -->
+    <section id="detalle" class="section-detail">
+      <div class="detail-card">
+        <div class="detail-header">
+          <h3>DETALLE DE PUESTO: PC-01</h3>
+        </div>
+        <div class="detail-status">
+          <strong>ESTADO:</strong>
+          <span class="status-dot red inline-dot"></span>
+        </div>
+        <div class="detail-body">
+          <strong>DETALLE:</strong> <span class="badge-alert">SOFTWARE DESACTUALIZADO</span>
+          <p class="detail-text">
+            Software Cisco Packet Tracer v8.2. El sistema detectó una licencia educativa vencida y versión desactualizada durante la revisión automática realizada hace 10 minutos. Esta falla impide a los estudiantes ejecutar las guías prácticas de topología de red o guardar sus avances, generando retrasos en el inicio de la sesión. Se requiere reinstalar la imagen base del programa o renovar el token de acceso mediante el servidor local de TI para restablecer el servicio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECCIÓN 4: FOOTER DE CRÉDITOS -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>Equipo Desarrollador:</strong> Los Anonymous</p>
+      <p><strong>Integrantes:</strong> Brandon Riquelme | Joaquín Campos</p>
+      <p class="subtext">Asignatura: Administración de Redes / Taller TI — Proyecto CORE</p>
+    </div>
+  </footer>
+
+</body>
+</html>
